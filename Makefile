@@ -32,11 +32,13 @@ $(BUILDDIR):
 	mkdir -p $(BUILDDIR)/bugs
 
 # Customer Management System
-$(CUSTOMER_EXEC): $(CUSTOMER_OBJECTS) | $(BUILDDIR)
+$(CUSTOMER_EXEC): $(CUSTOMER_OBJECTS)
+	@mkdir -p $(BINDIR)
 	$(CXX) $(CUSTOMER_OBJECTS) -o $@
 
 # Bug Simulation System
-$(BUG_EXEC): $(BUG_OBJECTS) | $(BUILDDIR)
+$(BUG_EXEC): $(BUG_OBJECTS)
+	@mkdir -p $(BINDIR)
 	$(CXX) $(BUG_OBJECTS) -o $@
 
 # Compile customer objects
