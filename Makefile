@@ -40,11 +40,13 @@ $(BUG_EXEC): $(BUG_OBJECTS) | $(BUILDDIR)
 	$(CXX) $(BUG_OBJECTS) -o $@
 
 # Compile customer objects
-$(BUILDDIR)/customer/%.o: $(SRCDIR)/customer/%.cpp | $(BUILDDIR)
+$(BUILDDIR)/customer/%.o: $(SRCDIR)/customer/%.cpp
+	@mkdir -p $(BUILDDIR)/customer
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Compile bug objects
-$(BUILDDIR)/bugs/%.o: $(SRCDIR)/bugs/%.cpp | $(BUILDDIR)
+$(BUILDDIR)/bugs/%.o: $(SRCDIR)/bugs/%.cpp
+	@mkdir -p $(BUILDDIR)/bugs
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Clean build files
