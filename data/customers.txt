@@ -1,0 +1,5 @@
+1;Mr;John Smith;Regular;3;1001;1002;1003
+2;Mrs;Sarah Johnson;New;2;2001;2002
+3;Dr;Michael Brown;Regular;1;3001
+4;Ms;Emily Davis;New;4;4001;4002;4003;4004
+5;Mr;David Wilson;Regular;2;5001;5002
